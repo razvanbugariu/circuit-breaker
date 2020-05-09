@@ -1,0 +1,14 @@
+version: '2.0'
+services:
+  resilience4j:
+    build:
+      context: ./resilience4j
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+  hystrix:
+    build:
+      context: ./hystrix
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
